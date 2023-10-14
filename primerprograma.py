@@ -1,3 +1,3 @@
-#haz la multiplicacion de 4*4
-print(4*4)
-print("hola"*4)
+nombre = input("¿Cual es tu nombre?")
+print("Hola", nombre)
+print(max(1, 2, 3))
