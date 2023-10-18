@@ -13,12 +13,15 @@ while True:
         print("Gracias por usar el programa")
         break
     elif producto == "l":
-        print("Lista de la compra",listaDeProductos+"\n")
+        print("Productos en la lista de la compra: " + str(listaDeProductos)+"\n")
     else:
         opciones = input("Seguro que deseas añadir "+producto+" a la lista de la compra? (s/n)\n").lower()
         if opciones == "s":
-            listaDeProductos.append(producto)
-            print(producto, "agregado a la lista de la compra\n")
+            if producto in listaDeProductos:
+                print(producto, "ya existe en la lista de la compra\n")
+            else:
+                listaDeProductos.append(producto)
+                print(producto, "agregado a la lista de la compra\n")
         else:
             pass
 
